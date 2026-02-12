@@ -1,4 +1,3 @@
-
 name: Deploy to EC2 (Nginx)
 
 on:
@@ -24,7 +23,13 @@ jobs:
       - name: Deploy to EC2
         run: |
           rsync -avz --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.vscode' \
             -e "ssh -i ~/.ssh/private_key.pem" \
-            ./ \
-            ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/html/
+            ./ ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/home/ubuntu/temp-deploy/
 
+          ssh -i ~/.ssh/private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "
+            sudo rsync -av --delete /home/ubuntu/temp-deploy/ /var/www/html/ &&
+            sudo rm -rf /home/ubuntu/temp-deploy
+          "
