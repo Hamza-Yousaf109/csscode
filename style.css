@@ -5,13 +5,12 @@
 }
 
 body {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    overflow: hidden;
+    background: whitesmoke;
 }
 
 .gif {
@@ -21,55 +20,38 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
 h2 {
     text-align: center;
     font-size: 3em;
-    background: linear-gradient(to right, #ffecd2, #fcb69f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #e94d58;
     margin: 15px 0;
-    letter-spacing: 2px;
 }
-
 .btn-group {
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    position: relative;
 }
-
 button {
     position: absolute;
-    width: 160px;
-    height: 50px;
-    font-size: 1.1em;
-    border-radius: 50px;
-    border: none;
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
     cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px gray;
+    border: 2px solid #e94d58;
+    font-size: 1.2em;
 }
-
-/* YES Button */
 button:nth-child(1) {
     margin-left: -200px;
-    background: linear-gradient(45deg, #00c9ff, #92fe9d);
-    color: #fff;
+    background: #e94d58;
 }
-
-/* NO Button */
 button:nth-child(2) {
     margin-right: -200px;
-    background: linear-gradient(45deg, #ff6a00, #ee0979);
-    color: #fff;
-}
-
-/* Hover Effect */
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background: white;
+    color: #e94d58;
 }
