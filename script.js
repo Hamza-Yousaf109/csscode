@@ -5,7 +5,7 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "me sehrish hu me tu attitude hi dikahao gi";
+  question.innerHTML = "me aneesa  hu chal wy chal mera wiya ho gya a";
   gif.src =
     "https://www.icegif.com/wp-content/uploads/love-hug-icegif.gif";
 });
